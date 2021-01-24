@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "PT Sans", sans-serif;
+    src: url(../fonts/PTSans.woff2);
+}
+
+body {
+    font-family: "PT Sans", sans-serif;
+}

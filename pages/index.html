@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Гостиницы в городке Седона</title>
+  <link rel="stylesheet" href='../css/style.css'>
+</head>
+<body>
+  <!-- uppercase будет добавлен позднее через css-->
+    <header>
+      <a>
+        <img src="https://via.placeholder.com/150x100" alt="Логотип Седоны">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#"> информация </a></li>
+          <li><a href="#"> фото и видео </a></li>
+          <li><a href="#"> карта штата </a></li>
+          <li><a href="catalog.html"> гостиницы </a></li>
+        </ul>
+      </nav>
+      <!-- тут два не функциональных изображения, я подумала, что лучше будет вставить их
+            бекграундом через css -->
+    </header>
+
+    <main>
+      <h1> Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+      <p> рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      <section>
+        <div>
+          <h2> настоящий <br> городок</h2>
+          <p> — №1 —</p>
+          <p> Седона — не аттракцион для туристов, там течёт своя жизнь </p>
+        </div>
+        <div>
+          <!-- насчет этого изображения у меня сомнения, но если чито по удобсту, то его лучше разметить тут -->
+          <img src="https://via.placeholder.com/150x100" alt="Местность Седоны" >
+        </div>
+      </section>
+      <section>
+        <h2> что мы предалагем вам </h2> <!-- этот заголовок в дальнейшем будет скрыт -->
+        <ul>
+          <li> </h2> <!-- изображения, которые должны быть ниже, так же бекраундом через css -->
+            <!-- через css будет добален uppercase -->
+            <p> жилье </p>
+            <p> рекомендуем пожить в настоящем мотеле, все как в кино! </p>
+          </li>
+          <li>
+            <p> еда </p>
+            <p> всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          </li>
+          <li>
+            <p> сувениры </p>
+            <p> не только китайского, но и местного производства!</p>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2> мост дьявола в Седоне</h2> <!-- этот заголовок в дальнейшем будет скрыт -->
+        <div>
+          <p> там есть <br> мост дьявола </p>
+          <p> — №2 — </p>
+          <p> да, по нему можно пройти! Если конечно вы осмелитесь </p>
+        </div>
+        <div>
+          <img src="https://via.placeholder.com/150x100" alt="Мост дьявола в Седоне">
+        </div>
+      </section>
+      <section>
+        <h2> что мы предалагем вам </h2> <!-- этот заголовок в дальнейшем будет скрыт -->
+        <ul>
+          <li>
+            <p> небольшая <br> площадь </p>
+            <p> — №3 — </p>
+            <p> все достопримечательности находятся очень близко </p>
+          </li>
+          <li>
+            <p> красивая <br> дрога </p>
+            <p> — №4 — </p>
+            <p> ехать в Седону из Лас-Вегаса совсем не скучно! </p>
+          </li>
+          <li>
+            <p> мало <br> туристов </p>
+            <p> — №5 — </p>
+            <p> большинство едет в Гранд Каньон и толпится там </p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <p> заинтересовались?</p>
+        <p> укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в седоне </p>
+        
+        <form method="post">
+          <button> поиск гостиницы в седоне </button>
+          <div>
+
+            <div>
+              <label for="date-inside"> дата заезда: </label>
+              <input type="text" id="date-inside" placeholder="24 января 2021">
+              <button type="button">
+                <span> выбрать дату </span> <!-- эта подпись в дальнейшем будет скрыта -->
+                <!-- тут нагодится свгшка календаря -->
+              </button>
+            </div>
+
+            <div>
+              <label for="date-outside"> дата выезда: </label>
+              <input type="text" id="date-outside" placeholder="21 февраля 2021"
+                >
+              <button type="button" class="form-date-input">
+                <span> выбрать дату </span> <!-- эта подпись в дальнейшем будет скрыта -->
+                <!-- тут нагодится свгшка календаря -->
+              </button>
+            </div>
+
+            <div>
+              <div>
+                <label for="adult"> взрослые: </label>
+                <button type="button"id="minAdult">-</button> 
+                <input type="number" id="adult" value="1">
+                <button type="button" id="moreAdult">+</button>
+              </div>
+
+              <div>
+                <label for="children"> дети: </label>
+                <button type="button"id="minChildren">-</button>
+                <input type="number" id="children" value="0">
+                <button type="button" id="moreChildren">+</button>
+              </div>
+            </div>
+
+            <div>
+              <button type="submit"> найти </button>
+            </div>
+
+          </div>
+        </form>
+
+      </section>
+
+      <section>
+        <h2> как нас найти </h2> <!-- этот заголовок в дальнейшем будет скрыт -->
+        <div id="map"></div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>
+        <a href="#"> #visitSedona </a> <br>
+        <a href="tel:+74956660166">+7(495) 666-01-66</a>
+      </div>
+      <div>
+        <ul>
+          <li>
+            <a href="#">
+              <span> twitter </span>
+              <!-- в дальнейшем надписи будут заменены на иконки соцсетей (свг)-->
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span> facebook </span>
+              <!-- в дальнейшем надписи будут заменены на иконки соцсетей (свг)-->
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span> YouTube </span>
+              <!-- в дальнейшем надписи будут заменены на иконки соцсетей (свг)-->
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <span> website by NTML Academy</span>
+        <a href="https://htmlacademy.ru/">
+          <!-- логотип академии будет добавлен позже (свг)-->
+        </a>
+      </div>
+    </footer>
+</body>
+</html>

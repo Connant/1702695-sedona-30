@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Гостиницы в городке Седона</title>
+  <link rel="stylesheet" href='../css/style.css'>
+</head>
+<body>
+  <!-- uppercase будет добавлен позднее через css-->
+    <header>
+      <a href="index.html">
+        <img src="https://via.placeholder.com/150x100" alt="Логотип Седоны">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="href="index.html""> информация </a></li>
+          <li><a href="#"> фото и видео </a></li>
+          <li><a href="#"> карта штата </a></li>
+          <li><a href="#"> гостиницы </a></li>
+        </ul>
+      </nav>
+      <!-- фон бекграундом через css -->
+    </header>
+
+    <main>
+        <form  action="https://echo.htmlacademy.ru" method="get">
+          <div>
+            <fieldset>
+              <legend> инфраструктура: </legend>
+  
+              <ul>
+                <li>
+                  <input type="checkbox" name="pool" id="pool" checked>
+                  <label> бассейн </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="parking" id="parking">
+                  <label for="parking"> парковка </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="wifi" id="wifi">
+                  <label for="wifi"> wi-fi</label>
+                </li>
+              </ul>
+            </fieldset>
+  
+            <fieldset>
+              <legend> тип жилья: </legend>
+  
+              <ul>
+                <li>
+                  <input type="checkbox" name="hotel" id="hotel" checked>
+                  <label for="hotel"> гостиница </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="motel" id="motel" checked>
+                  <label for="motel"> мотель </label>
+                </li>
+                <li>
+                  <input type="checkbox" name="apartments" id="apartments" checked>
+                  <label for="apartments"> апартаменты </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+  
+          <div>
+            <p> стоимость в сутки (Р): </p>
+  
+            <p>
+              <label>
+                от <input type="text" name="min-price" value="0">
+              </label>
+  
+              <label>
+                до <input type="text" name="max-price" value="3000">
+              </label>
+            </p>
+  
+            <div>
+              <button type="button">-</button>
+  
+              <button type="button">+</button>
+            </div>
+  
+            <button type="submit"> показать </button>
+          </div>
+        </form>
+  
+        <section>
+          <h1> гостиницы в Седоне </h1>
+  
+          <div>
+              <b> найдено: 3 </b>
+              <p> сортировка: </p>
+              <ul>
+                <li>
+                  <a href="#"> по цене </a>
+                </li>
+                <li>
+                  <a href="#"> по типу </a>
+                </li>
+                <li>
+                  <a href="#"> по рейтингу </a>
+                </li>
+              </ul>
+            </div>
+  
+          </div>
+  
+          <article>
+              <img src="https://via.placeholder.com/150x100" alt="гостиница Amara Resort & Spa">
+            <div>
+              <h2>
+                <a href="#"> Amara Resort & Spa </a>
+              </h2>
+  
+              <div >
+                <div>
+                  <p> гостиница </p>
+                  <a href="#"> подробнее </a>
+                </div>
+  
+                <div>
+                  <p> от 4000 р. </p>
+  
+                  <a href="#"> забронировать </a>
+                </div>
+              </div>
+            </div>
+  
+            <div>
+              <p> рейтинг: 8,5</p>
+            </div>
+          </article>
+  
+          <article>
+              <img src="https://via.placeholder.com/150x100" alt="мотель Desert Quail Inn">
+            <div>
+              <h2>
+                <a href="#"> Desert Quail Inn </a>
+              </h2>
+  
+              <div>
+                <div>
+                  <p> мотель </p>
+                  <a href="#"> подробнее </a>
+                </div>
+  
+                <div>
+                  <p> от 3000 р.</p>
+  
+                  <a href="#"> забронировать </a>
+                </div>
+              </div>
+            </div>
+  
+            <div>
+              <div></div>
+  
+              <p> рейтинг: 8,9 </p>
+            </div>
+          </article>
+  
+          <article>
+            <figure>
+              <img  src="https://via.placeholder.com/150x100" alt="апартаменты Villas at Poco Diablo">
+            </figure>
+  
+            <div>
+              <h2>
+                <a href="#"> Villas at Poco Diablo </a>
+              </h2>
+  
+              <div>
+                <div>
+                  <p> апартаменты </p>
+  
+                  <a href="#"> подробнее </a>
+                </div>
+  
+                <div>
+                  <p> от 2000 р.</p>
+  
+                  <a href="#"> забронировать </a>
+                </div>
+              </div>
+            </div>
+  
+            <div>
+              <div></div>
+  
+              <p> рейтинг: 9,2 </p>
+            </div>
+          </article>
+        </section>
+      </main>
+
+    <footer>
+        <div>
+          <a href="#"> #visitSedona </a> <br>
+          <a href="tel:+74956660166">+7(495) 666-01-66</a>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <a href="#">
+                <span> twitter </span>
+                <!-- в дальнейшем надписи будут заменены на иконки соцсетей (свг)-->
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span> facebook </span>
+                <!-- в дальнейшем надписи будут заменены на иконки соцсетей (свг)-->
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span> YouTube </span>
+                <!-- в дальнейшем надписи будут заменены на иконки соцсетей (свг)-->
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <span> website by NTML Academy</span>
+          <a href="https://htmlacademy.ru/">
+            <!-- логотип академии будет добавлен позже (свг)-->
+          </a>
+        </div>
+      </footer>
+  </body>
+  </html>
