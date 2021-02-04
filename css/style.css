@@ -1,8 +1,428 @@
+/* Fonts */
+
 @font-face {
-    font-family: "PT Sans", sans-serif;
-    src: url(../fonts/PTSans.woff2);
+  font-family: "PT Sans";
+  font-weight: 400;
+  src: url("../fonts/PTSans.woff2") format("woff2"),
+    url("../fonts/PTSans.woff") format("woff");
 }
 
-body {
-    font-family: "PT Sans", sans-serif;
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 700;
+  src: url("../fonts/PTSans-Bold.woff2") format("woff2"),
+    url("../fonts/PTSans-Bold.woff") format("woff");
+}
+
+/* Colors */
+
+:root {
+  --basic-background: #F2F2F2;
+  --basic-black: #000000;
+  --basic-darck: #333333;
+  --basick-white: #FFFFFF;
+
+  --first-accent-color: #81B3D2;
+  --second-accent-color: #669EC0;
+  --third-accent-color: #5496BD;
+  --fourth-accent-color: #766357;
+  --fifth-accent-color: #604E43;
+  --sixth-accent-color: #503E33;
+  --seventh-accent-color: #F2F2F2;
+  --eighth-accent-color: #EEEEEE;
+  --ninth-accent-color: #E5E5E5;
+
+  --detail-color-first: #6A6A6A;
+  --detail-color-second: #ABABAB;
+  --detail-color-third: #CACACA;
+  --detailt-color-fourth: #666666;
+  --detail-color-fifth: #A9A9A9;
+  --detail-color-sixth: #BDBBBC;
+  --detail-color-eighth: #231F20;
+}
+
+/* Global */
+
+.main-page {
+  background: var(--basic-background);
+}
+
+.page-body {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  background: var(--basick-white);
+}
+
+a {
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Main header-navigation */
+
+/* .main-header {
+} */
+
+.main-navigation {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  background-color: transparent;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+/* .li-items {
+} */
+
+.background-photo {
+  background:
+    /* url(../img/mask.png) no-repeat bottom, */
+    url(../img/background-photo.jpg) no-repeat;
+
+}
+
+/* .accent-photo {
+} */
+
+/* Main */
+
+.main-h {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  font-style: normal;
+}
+
+.main-text {
+  color: var(--basic-darck);
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.about-town {
+  color: var(--basick-white);
+  background: var(--first-accent-color);
+}
+
+.heading-two {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.image-one {
+  background-color: var(--detail-color-third);
+}
+
+.features-list {
+  list-style: none;
+}
+
+/* .features-item {
+} */
+
+.heading-three {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.text {
+  color: var(--basic-darck);
+}
+
+.devils-bridge {
+  color: var(--basick-white);
+  background: var(--first-accent-color);
+}
+
+.advantages {
+  background: var(--eighth-accent-color);
+}
+
+/* Form */
+
+.pre-form {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 24px;
+}
+
+.sentence {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.button {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: inherit;
+  border: none;
+}
+
+.input {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: inherit;
+  border: none;
+  background: var(--basic-background);
+}
+
+.button-form {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basick-white);
+  background: var(--fourth-accent-color);
+}
+
+.submit-button {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basick-white);
+  background: var(--first-accent-color);
+}
+
+/* Footer */
+
+.footer {
+  opacity: 0.9;
+  background: var(--basick-white);
+}
+
+/* .footer-content {
+} */
+
+.footer-contacts {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.footer-social {
+  list-style: none;
+}
+
+.social-item {
+  /* Я ЗНАЮ, ЧТО НЕ НАДО ПОКА ЗАДАВАТЬ РАЗМЕРЫ, НО ИНАЧЕ ЭТА ШТУКА НА ВСЮ СТРАНИЦУ РАСТЯГИВАЕТСЯ :( */
+  width: 45px;
+  background: var(--first-accent-color);
+}
+
+.htmlacademy {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+/* Catalog */
+
+.choice-form {
+  background: url(../img/background-catalog.jpg) no-repeat;
+  color: var(--basick-white);
+}
+
+.choice {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.filters {
+  list-style: none;
+}
+
+.input-catalog {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--basick-white);
+  /* ТУТ ЕЩЕ НАДО СДЕЛАТЬ ПРОЗРАЧНЫЙ ФОН И БЕЛУЮ РАМКУ, НО ЕСЛИ Я СДЕЛАЮ ЭТО СЕЙЧАС, ТО НИЧЕГО НЕ БУДЕТ
+  ВИДНО, ТАК КАК ФОН НЕ ОТПОЗИОНИРОВАНН, ТАК ЧТО СВОЙСТВА НИЖЕ Я РАСКОММЕНТИРУЮ, КОГДА ВСЕ БУДЕТ СТОЯТЬ НА
+  СВОИХ МЕСТАХ
+   */
+  /* border: 2px solid var(--basick-white);
+  background: transparent; */
+}
+
+.button-show {
+  color: var(--basick-white);
+  /* ТУТ ЕЩЕ НАДО СДЕЛАТЬ ПРОЗРАЧНЫЙ ФОН И БЕЛУЮ РАМКУ, НО ЕСЛИ Я СДЕЛАЮ ЭТО СЕЙЧАС, ТО НИЧЕГО НЕ БУДЕТ
+  ВИДНО, ТАК КАК ФОН НЕ ОТПОЗИОНИРОВАНН, ТАК ЧТО СВОЙСТВА НИЖЕ Я РАСКОММЕНТИРУЮ, КОГДА ВСЕ БУДЕТ СТОЯТЬ НА
+  СВОИХ МЕСТАХ
+   */
+  /* border: 2px solid var(--basick-white);
+  background: transparent; */
+}
+
+.resuls {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.sorting-criteria {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sorting-item {
+  list-style: none;
+}
+
+.button-sorting {
+  font-size: 12px;
+  line-height: 18px;
+  border: none;
+  background: none;
+  color: rgba(0, 0, 0, 0.3); /* других вариантов, как сделать текст позрачным, а подчеркивание - нет, я не нашла */
+  border-bottom: 1px dotted var(--first-accent-color);
+  /* rgba(129,	179,	210, 1); */
+}
+
+.hotels-photo {
+  background: var(--detail-color-third);
+}
+
+.hotel-name {
+  font-weight: bold;
+font-size: 21px;
+line-height: 26px;
+}
+
+.hotel-kind {
+  font-size: 14px;
+line-height: 21px;
+color: var(--basic-darck);
+}
+
+.button-about-hotel {
+  font-weight: bold;
+font-size: 14px;
+line-height: 21px;
+  color: var(--basick-white);
+  background: var(--first-accent-color);
+}
+
+.hotel-price {
+  font-size: 14px;
+line-height: 21px;
+color: var(--basic-darck);
+}
+
+.book-a-room {
+  font-weight: bold;
+font-size: 14px;
+line-height: 21px;
+  color: var(--basick-white);
+  background: var(--fourth-accent-color);
+}
+
+.rating {
+  /* Я ЗНАЮ, ЧТО НЕ НАДО ПОКА ЗАДАВАТЬ РАЗМЕРЫ, НО ИНАЧЕ ЭТА ШТУКА НА ВСЮ СТРАНИЦУ РАСТЯГИВАЕТСЯ */
+  width: 110px;
+  font-size: 14px;
+line-height: 21px;
+  color: var(--detailt-color-fourth);
+  background: var(--basic-background);
+
+}
+
+/* ДАША БЛЯТЬ НЕ ЗАБУДЬ ПОТОМ НОРМАЛЬНО НАЗВАТЬ ЭТУ ХЕРОТУ */
+
+.main-site-nav:hover,
+.button-sorting:hover {
+  color: var(--first-accent-color);
+}
+
+.main-site-nav:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.main-site-nav:active {
+  color: var(--fourth-accent-color);
+}
+
+.button-sorting:focus {
+  color: var(--basic-black);
+  border: none;
+}
+
+.button-sorting:active {
+  color: var(--first-accent-color);
+  border: none;
+}
+
+.hotel-name-link:hover {
+  color: var(--first-accent-color);
+}
+
+.hotel-name-link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.book-a-room:hover {
+ background: var(--fifth-accent-color);
+}
+
+.book-a-room:active {
+  background: var(--sixth-accent-color);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-about-hotel:hover,
+.submit-button:hover,
+.social-button:hover {
+  background: var(--second-accent-color);
+}
+
+.button-about-hotel:active,
+.submit-button:active,
+.social-button:active {
+  background: var(--third-accent-color);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-show:hover {
+  background: var(--basick-white);
+}
+
+.button-form:hover {
+  background: var(--fifth-accent-color);
+}
+
+.button-form:active {
+  background: var(--sixth-accent-color);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.input-active:hover {
+  background: var(--detail-color-seventh);
+}
+
+.input-active:focus {
+  background: var(--basick-white);
+  border: 2px solid var(--ninth-accent-color);
+}
+
+.htmlacademyl:hover {
+  color: var(--first-accent-color);
+}
+
+.htmlacademy:active {
+  color: var(--detail-color-eighth);
 }
