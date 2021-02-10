@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Daria Selezneva](https://up.htmlacademy.ru/htmlcss/30/user/1702695).
-* Наставник: [Влад Повелица](https://htmlacademy.ru/profile/id788487).
+* Наставник: [Сергей Кравченко](https://htmlacademy.ru/profile/id13921).
 
 ---
 
