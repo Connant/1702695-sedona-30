@@ -1,3 +1,39 @@
+/* Colors */
+
+:root {
+  --basic-black: #000000;
+  --basic-white: #FFFFFF;
+  --basic-background: #F2F2F2;
+  --basic-dark: #333333;
+  --main-background: #EEEEEE;
+
+  --basic-black-03: rgba(0, 0, 0, 0.3);
+  --basic-white-09: rgba(255, 255, 255, 0.9);
+  --basic-white-03: rgba(255, 255, 255, 0.3);
+
+  --dark-gray: #666666;
+  --gray: #6A6A6A;
+  --lightgray: #A9A9A9;
+  --very-lightgray: #ABABAB;
+
+  --accent-color: #81B3D2;
+  --accent-hover: #669EC0;
+  --accent-active: #5496BD;
+
+  --secondary-color: #766357;
+  --secondary-hover: #604E43;
+  --secondary-active: #503E33;
+
+  --input-hover: #EBEBEB;
+  --input-active: #E5E5E5;
+
+  /* Акцентные цвета вроде более-менее исправила, но цветами ниже ничего в олову не приходит */
+
+  --detail-color-first: #CACACA;
+  --detail-color-second: #BDBBBC;
+  --detail-color-third: #231F20;
+}
+
 /* Fonts */
 
 @font-face {
@@ -14,52 +50,22 @@
     url("../fonts/PTSans-Bold.woff") format("woff");
 }
 
-/* Colors */
-
-:root {
-  --basic-background: #F2F2F2;
-  --basic-black: #000000;
-  --basic-darck: #333333;
-  --basick-white: #FFFFFF;
-
-  --first-accent-color: #81B3D2;
-  --second-accent-color: #669EC0;
-  --third-accent-color: #5496BD;
-  --fourth-accent-color: #766357;
-  --fifth-accent-color: #604E43;
-  --sixth-accent-color: #503E33;
-  --seventh-accent-color: #F2F2F2;
-  --eighth-accent-color: #EEEEEE;
-  --ninth-accent-color: #E5E5E5;
-
-  --detail-color-first: #6A6A6A;
-  --detail-color-second: #ABABAB;
-  --detail-color-third: #CACACA;
-  --detailt-color-fourth: #666666;
-  --detail-color-fifth: #A9A9A9;
-  --detail-color-sixth: #BDBBBC;
-  --detail-color-eighth: #231F20;
-}
 
 /* Global */
 
-.main-page {
-  background: var(--basic-background);
-}
-
-.page-body {
+body {
   font-family: "PT Sans", "Arial", sans-serif;
+  text-align: center;
   font-style: normal;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
   color: var(--basic-black);
-  background: var(--basick-white);
+  background: var(--basic-background);
 }
 
 a {
   text-decoration: none;
-  color: var(--basic-black);
 }
 
 img {
@@ -67,145 +73,136 @@ img {
   height: auto;
 }
 
-/* Main header-navigation */
-
-/* .main-header {
-} */
-
-.main-navigation {
+.button {
+  font-family: inherit;
   font-weight: bold;
-  font-size: 14px;
-  line-height: 26px;
-  background-color: transparent;
+  text-transform: inherit;
+  border: none;
+  color: var(--basic-white);
+  outline: none;
 }
 
-.site-navigation {
+.input {
+  outline: none;
+}
+
+/* header */
+
+.main-nav {
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.main-nav-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-/* .li-items {
-} */
-
-.background-photo {
-  background:
-    /* url(../img/mask.png) no-repeat bottom, */
-    url(../img/background-photo.jpg) no-repeat;
-
+.intro-img {
+  background-image: url(../img/background-photo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-/* .accent-photo {
-} */
 
 /* Main */
 
-.main-h {
+.page-title {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
-  font-style: normal;
 }
 
-.main-text {
+.features {
+  background-color: var(--main-background);
+}
+
+.features-title {
+  line-height: 26px;
   color: var(--basic-darck);
-  font-size: 14px;
-  line-height: 26px;
-}
-
-.about-town {
-  color: var(--basick-white);
-  background: var(--first-accent-color);
-}
-
-.heading-two {
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 21px;
-}
-
-.image-one {
-  background-color: var(--detail-color-third);
 }
 
 .features-list {
-  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* .features-item {
-} */
+.features-item {
+  margin: 0;
+}
 
-.heading-three {
+.features-item-title {
+  font-size: 21px;
+}
+
+.features-item-big {
+  background-color: var(--accent-color);
+}
+
+.features-item-big {
   font-weight: bold;
   font-size: 21px;
-  line-height: 21px;
+  color: var(--basic-white);
 }
 
-.text {
-  color: var(--basic-darck);
+.features-item-big p {
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--basic-white);
 }
 
-.devils-bridge {
-  color: var(--basick-white);
-  background: var(--first-accent-color);
+.features-sublist {
+  list-style: none;
+  background-color: var(--basic-white);
 }
 
-.advantages {
-  background: var(--eighth-accent-color);
+.features-item .features-sublist {
+  color: var(--basic-black);
 }
 
-/* Form */
+.features-sublist p {
+  color: var(--basic-dark);
+}
 
-.pre-form {
+/* .search-form-block {
+} */
+
+.search-form-block {
+  background-color: var(--basic-white);
+}
+
+.search-form-title {
   font-weight: bold;
   font-size: 30px;
   line-height: 24px;
 }
 
-.sentence {
-  font-size: 14px;
+.search-form-block p {
   line-height: 24px;
 }
 
-.button {
-  font-family: inherit;
-  font-size: 14px;
-  line-height: 26px;
-  text-transform: inherit;
-  border: none;
-}
-
-.input {
-  font-family: inherit;
-  font-size: 14px;
-  line-height: 26px;
-  text-transform: inherit;
-  border: none;
-  background: var(--basic-background);
-}
-
-.button-form {
-  font-weight: bold;
+.button-search-form {
   font-size: 21px;
   line-height: 26px;
-  color: var(--basick-white);
-  background: var(--fourth-accent-color);
+  background-color: var(--secondary-color);
 }
 
-.submit-button {
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 26px;
-  color: var(--basick-white);
-  background: var(--first-accent-color);
+.button-search-form:hover {
+  background-color: var(--secondary-hover);
+}
+
+.button-search-form:active {
+  color: var(--basic-white-03);
+  background-color: var(--secondary-active);
 }
 
 /* Footer */
 
-.footer {
-  opacity: 0.9;
-  background: var(--basick-white);
+.index-footer {
+  background-color: var(--basic-white-09);
 }
 
-/* .footer-content {
+/* .index-footer-map {
 } */
 
 .footer-contacts {
@@ -214,215 +211,169 @@ img {
   line-height: 26px;
 }
 
-.footer-social {
+.footer-contacts a {
+  color: var(--basic-black);
+}
+
+.social-list {
+  display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.social-item {
-  /* Я ЗНАЮ, ЧТО НЕ НАДО ПОКА ЗАДАВАТЬ РАЗМЕРЫ, НО ИНАЧЕ ЭТА ШТУКА НА ВСЮ СТРАНИЦУ РАСТЯГИВАЕТСЯ :( */
-  width: 45px;
-  background: var(--first-accent-color);
+.social-link {
+  display: block;
+  width: 46px;
+  height: 48px;
+  margin: 0 6px;
+  background-color: var(--accent-color);
 }
 
-.htmlacademy {
-  font-size: 14px;
-  line-height: 26px;
+.social-link:hover {
+  background-color: var(--accent-hover);
+}
+
+.social-link:active {
+  color: var(--basic-white-03);
+  background-color: var(--accent-active);
+}
+
+.copyright-logo:hover {
+  color: var(--accent-color);
 }
 
 /* Catalog */
 
-.choice-form {
-  background: url(../img/background-catalog.jpg) no-repeat;
-  color: var(--basick-white);
+.catalog {
+  background-color: var(--basic-white);
 }
 
-.choice {
+.filter-form-group {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.filter-form {
+  color: var(--basic-white);
+  background-image: url(../img/background-catalog.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.filter-form-title {
   font-weight: bold;
   font-size: 16px;
-  line-height: 21px;
 }
 
-.filters {
+.filter-form-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .input-catalog {
-  font-family: inherit;
-  font-size: 14px;
-  line-height: 21px;
-  color: var(--basick-white);
-  /* ТУТ ЕЩЕ НАДО СДЕЛАТЬ ПРОЗРАЧНЫЙ ФОН И БЕЛУЮ РАМКУ, НО ЕСЛИ Я СДЕЛАЮ ЭТО СЕЙЧАС, ТО НИЧЕГО НЕ БУДЕТ
-  ВИДНО, ТАК КАК ФОН НЕ ОТПОЗИОНИРОВАНН, ТАК ЧТО СВОЙСТВА НИЖЕ Я РАСКОММЕНТИРУЮ, КОГДА ВСЕ БУДЕТ СТОЯТЬ НА
-  СВОИХ МЕСТАХ
-   */
-  /* border: 2px solid var(--basick-white);
-  background: transparent; */
+  color: var(--basic-white);
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  background-color: transparent;
 }
 
-.button-show {
-  color: var(--basick-white);
-  /* ТУТ ЕЩЕ НАДО СДЕЛАТЬ ПРОЗРАЧНЫЙ ФОН И БЕЛУЮ РАМКУ, НО ЕСЛИ Я СДЕЛАЮ ЭТО СЕЙЧАС, ТО НИЧЕГО НЕ БУДЕТ
-  ВИДНО, ТАК КАК ФОН НЕ ОТПОЗИОНИРОВАНН, ТАК ЧТО СВОЙСТВА НИЖЕ Я РАСКОММЕНТИРУЮ, КОГДА ВСЕ БУДЕТ СТОЯТЬ НА
-  СВОИХ МЕСТАХ
-   */
-  /* border: 2px solid var(--basick-white);
-  background: transparent; */
+.filter-form-button {
+  font-weight: normal;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  background-color: transparent;
 }
 
-.resuls {
+.sorting-results {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
 }
 
-.sorting-criteria {
+.sorting-title {
   font-size: 12px;
   line-height: 18px;
 }
 
-.sorting-item {
+.sorting-list {
   list-style: none;
 }
 
-.button-sorting {
+.sorting-link {
   font-size: 12px;
   line-height: 18px;
-  border: none;
-  background: none;
-  color: rgba(0, 0, 0, 0.3); /* других вариантов, как сделать текст позрачным, а подчеркивание - нет, я не нашла */
-  border-bottom: 1px dotted var(--first-accent-color);
-  /* rgba(129,	179,	210, 1); */
+  color: var(--basic-black-03);
+  border-bottom: 1px dotted var(--accent-color);
 }
 
-.hotels-photo {
-  background: var(--detail-color-third);
+.sorting-link:hover {
+  color: var(--accent-color);
 }
 
-.hotel-name {
-  font-weight: bold;
-font-size: 21px;
-line-height: 26px;
-}
-
-.hotel-kind {
-  font-size: 14px;
-line-height: 21px;
-color: var(--basic-darck);
-}
-
-.button-about-hotel {
-  font-weight: bold;
-font-size: 14px;
-line-height: 21px;
-  color: var(--basick-white);
-  background: var(--first-accent-color);
-}
-
-.hotel-price {
-  font-size: 14px;
-line-height: 21px;
-color: var(--basic-darck);
-}
-
-.book-a-room {
-  font-weight: bold;
-font-size: 14px;
-line-height: 21px;
-  color: var(--basick-white);
-  background: var(--fourth-accent-color);
-}
-
-.rating {
-  /* Я ЗНАЮ, ЧТО НЕ НАДО ПОКА ЗАДАВАТЬ РАЗМЕРЫ, НО ИНАЧЕ ЭТА ШТУКА НА ВСЮ СТРАНИЦУ РАСТЯГИВАЕТСЯ */
-  width: 110px;
-  font-size: 14px;
-line-height: 21px;
-  color: var(--detailt-color-fourth);
-  background: var(--basic-background);
-
-}
-
-/* ДАША БЛЯТЬ НЕ ЗАБУДЬ ПОТОМ НОРМАЛЬНО НАЗВАТЬ ЭТУ ХЕРОТУ */
-
-.main-site-nav:hover,
-.button-sorting:hover {
-  color: var(--first-accent-color);
-}
-
-.main-site-nav:active {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.main-site-nav:active {
-  color: var(--fourth-accent-color);
-}
-
-.button-sorting:focus {
+.sorting-link:active {
   color: var(--basic-black);
   border: none;
 }
 
-.button-sorting:active {
-  color: var(--first-accent-color);
-  border: none;
+.hotels {
+  text-align: left;
+  list-style: none;
+}
+
+.hotel-name-link {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
 }
 
 .hotel-name-link:hover {
-  color: var(--first-accent-color);
+  color: var(--accent-color);
 }
 
 .hotel-name-link:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--basic-black-03);
 }
 
-.book-a-room:hover {
- background: var(--fifth-accent-color);
+.button-light {
+  padding: 3px 16px;
+  background-color: var(--accent-color);
 }
 
-.book-a-room:active {
-  background: var(--sixth-accent-color);
-  color: rgba(255, 255, 255, 0.3);
+.button-light:hover {
+  background-color: var(--accent-hover);
 }
 
-.button-about-hotel:hover,
-.submit-button:hover,
-.social-button:hover {
-  background: var(--second-accent-color);
+.button-light:active {
+  color: var(--basic-white-03);
+  background-color: var(--accent-active);
 }
 
-.button-about-hotel:active,
-.submit-button:active,
-.social-button:active {
-  background: var(--third-accent-color);
-  color: rgba(255, 255, 255, 0.3);
+.button-dark {
+  padding: 3px 16px;
+  background-color: var(--secondary-color);
 }
 
-.button-show:hover {
-  background: var(--basick-white);
+.button-dark:hover {
+  background-color: var(--secondary-hover);
 }
 
-.button-form:hover {
-  background: var(--fifth-accent-color);
+.button-dark:active {
+  color: var(--basic-white-03);
+  background-color: var(--secondary-active);
 }
 
-.button-form:active {
-  background: var(--sixth-accent-color);
-  color: rgba(255, 255, 255, 0.3);
+.hotel-item-rating {
+  width: 110px;
+  /* padding: 3px 15px 3px 12px; */
+  color: var(--dark-gray);
+  background-color: var(--basic-background);
 }
 
-.input-active:hover {
-  background: var(--detail-color-seventh);
-}
-
-.input-active:focus {
-  background: var(--basick-white);
-  border: 2px solid var(--ninth-accent-color);
-}
-
-.htmlacademyl:hover {
-  color: var(--first-accent-color);
-}
-
-.htmlacademy:active {
-  color: var(--detail-color-eighth);
+.footer {
+  background-color: var(--basic-white-09);
 }
