@@ -11,6 +11,8 @@
   --basic-white-09: rgba(255, 255, 255, 0.9);
   --basic-white-03: rgba(255, 255, 255, 0.3);
 
+  --shadow: rgba(0, 1, 1, 0.2);
+
   --dark-gray: #666666;
   --gray: #6A6A6A;
   --lightgray: #A9A9A9;
@@ -26,6 +28,9 @@
 
   --input-hover: #EBEBEB;
   --input-active: #E5E5E5;
+
+  --background-img-index: #BCD0E0;
+  --background-img-catalog: #67717B;
 
   /* Акцентные цвета вроде более-менее исправила, но цветами ниже ничего в олову не приходит */
 
@@ -56,7 +61,6 @@
 body {
   font-family: "PT Sans", "Arial", sans-serif;
   text-align: center;
-  font-style: normal;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
@@ -66,6 +70,7 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--basic-black);
 }
 
 img {
@@ -86,6 +91,15 @@ img {
   outline: none;
 }
 
+.wrapper {
+  width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--basic-white);
+  box-shadow: 0px 5px 15px var(--shadow);
+}
+
 /* header */
 
 .main-nav {
@@ -99,13 +113,76 @@ img {
   list-style: none;
 }
 
+/* Footer */
+
+.index-footer {
+  background-color: var(--basic-white);
+}
+
+.all-contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  background-color: var(--basic-white-09);
+}
+
+.footer-contacts {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.footer-contacts a {
+  color: var(--basic-black);
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: auto;
+  /* ты вроде говорил задать тут margin 0, но ведь auto поставит его посередине */
+  padding: 0;
+}
+
+.social-link {
+  display: block;
+  width: 46px;
+  height: 48px;
+  margin: 0 6px;
+  background-color: var(--accent-color);
+}
+
+.social-link:hover {
+  background-color: var(--accent-hover);
+}
+
+.social-link:active {
+  color: var(--basic-white-03);
+  background-color: var(--accent-active);
+}
+
+.copyright {
+  margin: auto;
+  /* ты вроде говорил задать тут margin 0, но ведь auto поставит его посередине x2*/
+}
+
+.copyright-logo:active {
+  color: var(--detail-color-second);
+}
+
+.copyright-logo:hover {
+  color: var(--accent-color);
+}
+
+/* Main */
+
 .intro-img {
+  background-color: var(--background-img-index);
   background-image: url(../img/background-photo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-/* Main */
 
 .page-title {
   font-weight: bold;
@@ -123,6 +200,9 @@ img {
 }
 
 .features-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
   margin: 0;
   padding: 0;
 }
@@ -131,15 +211,36 @@ img {
   margin: 0;
 }
 
+.features-item-img {
+  grid-column: span 2;
+}
+
+.features-item-big {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 1/-1;
+
+  background-color: var(--accent-color);
+}
+
+.features-item-big:nth-child(even) {
+  direction: rtl;
+}
+
+.features-sublist {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 1/-1;
+
+  padding: 0;
+  background-color: var(--basic-white);
+}
+
 .features-item-title {
   font-size: 21px;
 }
 
-.features-item-big {
-  background-color: var(--accent-color);
-}
-
-.features-item-big {
+.features-item-big .features-item-title {
   font-weight: bold;
   font-size: 21px;
   color: var(--basic-white);
@@ -149,11 +250,6 @@ img {
   font-size: 14px;
   font-weight: normal;
   color: var(--basic-white);
-}
-
-.features-sublist {
-  list-style: none;
-  background-color: var(--basic-white);
 }
 
 .features-item .features-sublist {
@@ -196,53 +292,6 @@ img {
   background-color: var(--secondary-active);
 }
 
-/* Footer */
-
-.index-footer {
-  background-color: var(--basic-white-09);
-}
-
-/* .index-footer-map {
-} */
-
-.footer-contacts {
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 26px;
-}
-
-.footer-contacts a {
-  color: var(--basic-black);
-}
-
-.social-list {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.social-link {
-  display: block;
-  width: 46px;
-  height: 48px;
-  margin: 0 6px;
-  background-color: var(--accent-color);
-}
-
-.social-link:hover {
-  background-color: var(--accent-hover);
-}
-
-.social-link:active {
-  color: var(--basic-white-03);
-  background-color: var(--accent-active);
-}
-
-.copyright-logo:hover {
-  color: var(--accent-color);
-}
-
 /* Catalog */
 
 .catalog {
@@ -250,7 +299,6 @@ img {
 }
 
 .filter-form-group {
-  display: inline;
   margin: 0;
   padding: 0;
   border: 0;
@@ -258,6 +306,7 @@ img {
 
 .filter-form {
   color: var(--basic-white);
+  background-color: var(--background-img-catalog);
   background-image: url(../img/background-catalog.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -320,6 +369,8 @@ img {
 }
 
 .hotels {
+  margin: 0;
+  padding: 0;
   text-align: left;
   list-style: none;
 }
