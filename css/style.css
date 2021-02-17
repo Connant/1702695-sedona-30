@@ -163,6 +163,8 @@ img {
 }
 
 .copyright {
+  display: flex;
+  align-items: center;
   margin: auto;
   /* ты вроде говорил задать тут margin 0, но ведь auto поставит его посередине x2*/
 }
@@ -207,10 +209,6 @@ img {
   padding: 0;
 }
 
-.features-item {
-  margin: 0;
-}
-
 .features-item-img {
   grid-column: span 2;
 }
@@ -231,16 +229,17 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column: 1/-1;
-
   padding: 0;
+  list-style: none;
   background-color: var(--basic-white);
 }
 
 .features-item-title {
+  color: var(--basic-black);
   font-size: 21px;
 }
 
-.features-item-big .features-item-title {
+.features-item-info .features-item-title {
   font-weight: bold;
   font-size: 21px;
   color: var(--basic-white);
@@ -250,10 +249,6 @@ img {
   font-size: 14px;
   font-weight: normal;
   color: var(--basic-white);
-}
-
-.features-item .features-sublist {
-  color: var(--basic-black);
 }
 
 .features-sublist p {
