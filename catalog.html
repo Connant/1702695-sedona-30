@@ -33,15 +33,15 @@
 
         <ul class="filter-form-list">
           <li class="filter-form-item">
-            <input type="checkbox" name="pool" id="pool" value="бассейн" checked>
+            <input class="visually-hidden" type="checkbox" name="pool" id="pool" value="бассейн" checked>
             <label>Бассейн</label>
           </li>
           <li class="filter-form-item">
-            <input type="checkbox" name="parking" id="parking" value="парковка">
+            <input class="visually-hidden" type="checkbox" name="parking" id="parking" value="парковка">
             <label for="parking">Парковка</label>
           </li>
           <li class="filter-form-item">
-            <input type="checkbox" name="wifi" id="wifi" value="wi-fi">
+            <input class="visually-hidden" type="checkbox" name="wifi" id="wifi" value="wi-fi">
             <label for="wifi">Wi-Fi</label>
           </li>
         </ul>
@@ -52,15 +52,15 @@
 
         <ul class="filter-form-list">
           <li class="filter-form-item">
-            <input type="checkbox" name="hotel" id="hotel" value="гостиница" checked>
+            <input class="visually-hidden" type="checkbox" name="hotel" id="hotel" value="гостиница" checked>
             <label for="hotel">Гостиница</label>
           </li>
           <li class="filter-form-item">
-            <input type="checkbox" name="motel" id="motel" value="мотель" checked>
+            <input class="visually-hidden" type="checkbox" name="motel" id="motel" value="мотель" checked>
             <label for="motel">Мотель</label>
           </li>
           <li class="filter-form-item">
-            <input type="checkbox" name="apartments" id="apartments" value="апартаменты" checked>
+            <input class="visually-hidden" type="checkbox" name="apartments" id="apartments" value="апартаменты" checked>
             <label for="apartments">Апартаменты</label>
           </li>
         </ul>
@@ -71,19 +71,21 @@
         <legend class="filter-form-title">Стоимость в сутки (Р):</legend>
 
         <p>
-          <label>
-            от <input class="input input-catalog" type="text" name="min-price" value="0">
+          <label class="label-catalog">
+            От <input class="input input-catalog" type="text" name="min-price" value="0">
           </label>
 
-          <label>
-            до <input class="input input-catalog" type="text" name="max-price" value="3000">
+          <label class="label-catalog">
+            До <input class="input input-catalog" type="text" name="max-price" value="3000">
           </label>
         </p>
-        <!-- <div>
-              <button type="button">-</button>
-
-              <button type="button">+</button>
-            </div> -->
+        <div class="range">
+          <div class="scale">
+            <div class="bar" style="width: 82%; margin-left: 0%" />
+          </div>
+          <div class="toggle toggle-min" style="left:3%" />
+          <div class="toggle toggle-max" style="left:82%" />
+        </div>
         <button class="button filter-form-button" type="submit">Показать</button>
       </fieldset>
     </form>
@@ -189,25 +191,22 @@
 
         <li class="social-item">
           <a class="social-link" href="#">
-            TW
             </svg>
           </a>
         </li>
 
         <li class="social-item">
           <a class="social-link" href="#">
-            FB
           </a>
         </li>
 
         <li class="social-item">
           <a class="social-link" href="#">
-            YT
           </a></li>
       </ul>
 
       <p class="copyright">
-        website by
+        website by &nbsp
         <a class="copyright-logo" href="https://up.htmlacademy.ru/htmlcss/30">
           <svg class="svg-html" width="115" height="41" viewBox="0 0 115 41" fill="none"
             xmlns="http://www.w3.org/2000/svg">
