@@ -894,6 +894,33 @@ label[for="childrens-number"] {
   border: none;
 }
 
+.sorting-order {
+  display: flex;
+  justify-content: space-between;
+  width: 34px;
+  height: 11px;
+  margin-left: auto;
+  padding-top: 40px;
+}
+
+.link-top {
+  display: flex;
+  width: 0;
+	height: 0;
+	border-left: 5.5px solid transparent;
+	border-right: 5.5px solid transparent;
+	border-bottom: 10px solid var(--detail-color-first);
+}
+
+.link-bottom {
+  display: flex;
+  width: 0;
+	height: 0;
+	border-left: 5.5px solid transparent;
+	border-right: 5.5px solid transparent;
+	border-top: 10px solid var(--accent-color);
+}
+
 .hotels {
   display: flex;
   flex-direction: column;
