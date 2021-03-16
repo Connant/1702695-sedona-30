@@ -185,6 +185,13 @@ img {
   width: 100%;
   height: 594px;
   line-height: 0;
+  background-image: url(../img/map.png);
+  background-size: cover;
+  background-color: var(--very-lightgray);
+}
+
+.index-footer-map iframe {
+  border: none;
 }
 
 .contacts {
