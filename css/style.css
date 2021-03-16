@@ -557,7 +557,9 @@ img {
 
 .search-form .input:focus {
   background-color: var(--basic-white);
-  outline: 2px solid var(--input-active);
+  border: 2px solid var(--input-active);
+  box-sizing: border-box;
+  outline: none;
 }
 
 .button-calendar {
