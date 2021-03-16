@@ -26,7 +26,7 @@
   </header>
 
   <main>
-    <!-- <h2> гостиницы в Седоне </h2> -->
+    <h2 class="visually-hidden"> гостиницы в Седоне </h2>
     <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
       <fieldset class="filter-form-group">
         <legend class="filter-form-title">Инфраструктура:</legend>
@@ -71,9 +71,9 @@
         <legend class="filter-form-title">Стоимость в сутки (Р):</legend>
 
         <div class="price-range">
-          <label class="min-price">От 0<span class="item-price" type="range" name="min-price" value="0">
+          <label class="min-price">От<input class="price-input" value="0">
           </label>
-          <label class="max-price">До 3000<span class="item-price" type="range" name="min-price" value="3000">
+          <label class="max-price">До<input class="price-input" value="3000">
           </label>
         </div>
         <div class="price-range-filter">
@@ -103,8 +103,8 @@
           </li>
         </ul>
         <div class="sorting-order">
-          <a class="link-top"></a>
-          <a class="link-bottom"></a>
+          <a href="#" class="link-top link-top-active" aria-label="Сортировка по возрастанию"></a>
+          <a href="#" class="link-bottom" aria-label="Сортировка по убыванию"></a>
         </div>
       </div>
 
@@ -143,7 +143,7 @@
             </h3>
             <div class="hotel-info">
                 <p class="hotel-item-text">Мотель</p>
-                <p class="hotel-item-text"> от 3000 р.</p>
+                <p class="hotel-item-text">От 3000 р.</p>
                 <a class="button button-light" href="#">Подробнее</a>
                 <a class="button button-dark" href="#">Забронировать</a>
               </div>
@@ -190,18 +190,18 @@
       <ul class="social-list">
 
         <li class="social-item">
-          <a class="social-link twitter" href="#">
+          <a class="social-link twitter" href="#" aria-label="Седона в Twitter">
             </svg>
           </a>
         </li>
 
         <li class="social-item">
-          <a class="social-link facebook" href="#">
+          <a class="social-link facebook" href="#" aria-label="Седона в Facebook">
           </a>
         </li>
 
         <li class="social-item">
-          <a class="social-link youtube" href="#">
+          <a class="social-link youtube" href="#" aria-label="Седона в YouTebe">
           </a></li>
       </ul>
 

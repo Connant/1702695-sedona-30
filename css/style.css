@@ -6,6 +6,7 @@
   --basic-background: #F2F2F2;
   --basic-dark: #333333;
   --main-background: #EEEEEE;
+  --background-page: #888888;
 
   --basic-black-03: rgba(0, 0, 0, 0.3);
   --basic-white-09: rgba(255, 255, 255, 0.9);
@@ -133,7 +134,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  padding: 15px 72px;
+  padding: 14px 72px 17px;
   list-style: none;
 }
 
@@ -148,8 +149,6 @@ img {
 .main-nav-item a:active {
   color: var(--basic-black-03);
 }
-
-
 
 .main-nav-list li:nth-child(4n+2) {
   margin-right: 20%;
@@ -219,6 +218,15 @@ img {
 .footer-contacts a {
   margin-bottom: 14px;
   color: var(--basic-black);
+}
+
+.footer-contacts a:hover,
+.footer-contacts a:focus {
+  color: var(--accent-color);
+}
+
+.footer-contacts a:active {
+  color: var(--basic-black-03);
 }
 
 .social-list {
@@ -318,7 +326,7 @@ img {
 .intro-img::after {
   position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: -1px;
   height: 57px;
   left: 0;
   content: "";
@@ -329,17 +337,17 @@ img {
 
 .page-title {
   width: 470px;
-  margin: 42px auto 43px auto;
+  margin: 41px auto 43px auto;
   font-weight: bold;
   font-size: 21px;
-  line-height: 28px;
+  line-height: 27px;
 }
 
 .features-lead {
   width: 509px;
-  margin: 41px auto 51px auto;
+  margin: 40px auto 51px auto;
   line-height: 26px;
-  color: var(--basic-darck);
+  color: var(--basic-dark);
   background-color: var(--basic-white);
 }
 
@@ -438,15 +446,19 @@ img {
   margin: 0 auto;
 }
 
-.features-item-info {
-  padding: 48px 49px 52px 46px;
-  height: 156px;
+.features-info-first {
+  padding: 47px 49px 52px 48px;
 }
 
-.features-item-info .features-item-title {
+.features-info-first .features-item-title,
+.features-info-second .features-item-title {
   font-weight: bold;
   font-size: 21px;
   color: var(--basic-white);
+}
+
+.features-info-second {
+  padding: 49px 49px 50px 50px;
 }
 
 .features-item-big p {
@@ -458,7 +470,7 @@ img {
 
 .features-sublist p {
   width: 300px;
-  padding-bottom: 27px;
+  padding-bottom: 28px;
   color: var(--basic-dark);
 }
 
@@ -634,7 +646,7 @@ label[for="childrens-number"] {
 /* Catalog */
 
 .active {
-  color: var(--basic-black-03);
+  color: var(--secondary-color);
   cursor: default;
 }
 
@@ -645,7 +657,7 @@ label[for="childrens-number"] {
 .filter-form {
   display: flex;
   text-align: start;
-  padding: 27px 70px 0px 72px;
+  padding: 25px 70px 14px 72px;
   color: var(--basic-white);
   background-color: var(--background-img-catalog);
   background-image: url(../img/background-catalog.jpg);
@@ -655,38 +667,44 @@ label[for="childrens-number"] {
 
 .filter-form-group {
   width: 22%;
-  margin: 0 24px 0 0;
+  margin: 0 22px 0 0;
   padding: 0;
   border: 0;
 }
 
 .filter-form-title {
-  padding: 0 0 10px 0;
+  padding: 0 0 11px 0;
   text-align: start;
   font-weight: bold;
   font-size: 16px;
 }
 
 .filter-form-list {
-  margin: px 0 0 0;
+  margin: 16px 0 0 0;
   padding: 0;
   list-style: none;
 }
 
 .filter-form-item {
   padding: 0 0 25px 0;
+  margin: -1px 1px 0 0
 }
 
 .filter-form-item:last-child {
-  padding-bottom: 18px;
+  padding-bottom: 19px;
 }
 
 
 .label-filter {
   position: relative;
   display: block;
-  padding-left: 40px;
+  padding-left: 41px;
   cursor: pointer;
+}
+
+.input-checkbox:focus+label {
+  width: 120px;
+  outline: auto;
 }
 
 .input-checkbox:checked+label::after {
@@ -725,9 +743,17 @@ label[for="childrens-number"] {
   width: 316px;
   padding: 0;
   margin-left: auto;
+  margin-right: 3px;
   font-weight: bold;
   line-height: 21px;
   color: var(--basic-white);
+  border: none;
+}
+
+.price-input {
+  width: 50px;
+  color: var(--basic-white);
+  background-color: transparent;
   border: none;
 }
 
@@ -743,7 +769,7 @@ label[for="childrens-number"] {
 
 .min-price {
   display: flex;
-  margin-left: 11px;
+  margin-left: 28px;
   align-items: center;
   justify-content: center;
   font-family: inherit;
@@ -752,7 +778,7 @@ label[for="childrens-number"] {
 
 .max-price {
   display: flex;
-  margin-right: -5px;
+  margin-right: -9px;
   align-items: center;
   justify-content: center;
   font-family: inherit;
@@ -809,6 +835,7 @@ label[for="childrens-number"] {
   border-radius: 50%;
   background-color: var(--very-lightgray);
   box-shadow: 0px 2px 0px 0px var(--very-lightgray);
+  cursor: pointer;
 }
 
 .toggle:hover,
@@ -830,16 +857,22 @@ label[for="childrens-number"] {
   justify-content: center;
   width: 137px;
   padding: 8px 0 8px 0;
-  margin: 33px auto 0;
+  margin: 34px auto 0 84px;
   font-weight: normal;
   border: 2px solid var(--basic-white);
   border-radius: 2px;
   background-color: transparent;
 }
 
+.filter-form-button:hover,
+.filter-form-button:focus {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
 .sorting {
   display: flex;
-  padding: 0 73px 30px 73px;
+  padding: 0 73px 31px 73px;
   border-bottom: 1px solid var(--input-active);
 }
 
@@ -857,7 +890,7 @@ label[for="childrens-number"] {
 }
 
 .sorting-title {
-  padding: 32px 40px 0 0;
+  padding: 31px 40px 0 1px;
   font-size: 12px;
   line-height: 18px;
 }
@@ -872,9 +905,12 @@ label[for="childrens-number"] {
 }
 
 .sorting-item {
-  padding: 32px 32px 0 0;
+  padding: 30px 32px 0 0;
   box-sizing: border-box;
+}
 
+.sorting-item:nth-child(3) {
+  padding: 30px 33px 0 2px;
 }
 
 .sorting-link {
@@ -909,7 +945,21 @@ label[for="childrens-number"] {
 	height: 0;
 	border-left: 5.5px solid transparent;
 	border-right: 5.5px solid transparent;
-	border-bottom: 10px solid var(--detail-color-first);
+	border-bottom: 11px solid var(--detail-color-first);
+}
+
+.link-top:active,
+.link-top-active {
+	border-left: 5.5px solid transparent;
+	border-right: 5.5px solid transparent;
+	border-bottom: 10px solid var(--accent-color);
+}
+
+.link-top:hover,
+.link-top:focus {
+	border-left: 5.5px solid transparent;
+	border-right: 5.5px solid transparent;
+	border-bottom: 10px solid var(--basic-black);
 }
 
 .link-bottom {
@@ -917,6 +967,19 @@ label[for="childrens-number"] {
   width: 0;
 	height: 0;
 	border-left: 5.5px solid transparent;
+	border-right: 5.5px solid transparent;
+	border-top: 10px solid var(--detail-color-first);
+}
+
+.link-bottom:hover,
+.link-bottom:focus {
+  border-left: 5.5px solid transparent;
+	border-right: 5.5px solid transparent;
+	border-top: 10px solid var(--basic-black);
+}
+
+.link-bottom:active {
+  border-left: 5.5px solid transparent;
 	border-right: 5.5px solid transparent;
 	border-top: 10px solid var(--accent-color);
 }
@@ -938,11 +1001,11 @@ label[for="childrens-number"] {
 }
 
 .hotel-img-link {
-  margin: 30px 0 25px;
+  margin: 31px 0 24px 1px;
 }
 
 .hotel-info {
-  width: 258px;
+  width: 260px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -979,7 +1042,7 @@ label[for="childrens-number"] {
 
 .button-light {
   margin: 16px 6px 0 0;
-  padding: 3px 16px;
+  padding: 3px 17px;
   background-color: var(--accent-color);
 }
 
@@ -994,7 +1057,7 @@ label[for="childrens-number"] {
 
 .button-dark {
   margin: 16px 0 0 0;
-  padding: 3px 16px;
+  padding: 3px 16.5px;
   background-color: var(--secondary-color);
 }
 
