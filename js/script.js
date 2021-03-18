@@ -7,6 +7,7 @@ const departure = document.querySelector("[name=departure]");
 const adults = document.querySelector("[name=adults]");
 const childrens = document.querySelector("[name=childrens]");
 
+
 let isStorageSupport = true;
 let storageArrival = "";
 let storageDeparture = "";
@@ -29,22 +30,18 @@ searchForm.addEventListener("submit", function (evt) {
     searchForm.offsetWidth = searchForm.offsetWidth;
     searchForm.classList.add("modal-error");
   } else {
-  if (isStorageSupport) {
-    localStorage.setItem("arrival", arrival.value);
-    localStorage.setItem("departure", departure.value);
-    localStorage.setItem("adults", adults.value);
-    localStorage.setItem("childrens", childrens.value);
+    if (isStorageSupport) {
+      localStorage.setItem("arrival", arrival.value);
+      localStorage.setItem("departure", departure.value);
+      localStorage.setItem("adults", adults.value);
+      localStorage.setItem("childrens", childrens.value);
     }
   }
 });
 
-searchButton.onclick = function modalShow() {
-	if(document.querySelector('.modal-show')) {
-		searchForm.classList.remove('modal-show');
-		searchForm.classList.add('modal-hidden');
-	}
-	else {
-		searchForm.classList.remove('modal-hidden');
-		searchForm.classList.add('modal-show');
-	}
+searchButton.onclick = function modalShow(evt) {
+  evt.preventDefault()
+
+  searchForm.classList.toggle("modal-show");
+  searchForm.classList.toggle("modal-hidden");
 }

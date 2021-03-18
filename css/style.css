@@ -186,6 +186,7 @@ img {
 .index-footer {
   position: relative;
   background-color: var(--basic-white);
+  margin-top: 29px;
 }
 
 .index-footer-map {
@@ -660,7 +661,7 @@ img {
 
 .search-form-block {
   position: relative;
-  padding-top: 58px;
+  padding-top: 55px;
   background-color: var(--basic-white);
   z-index: 2;
 }
@@ -680,15 +681,13 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 27px auto 44px;
+  margin: 27px auto 74px;
   line-height: 24px;
 }
 
 .button-search-form {
   position: relative;
-  width: 568px;
-  height: 86px;
-  padding: 0;
+  padding: 29px 140px;
   font-size: 21px;
   line-height: 26px;
   background-color: var(--secondary-color);
@@ -941,7 +940,6 @@ label[for="childrens-number"] {
   border-radius: 3px;
 }
 
-
 .input-checkbox+label::after {
   display: none;
   position: absolute;
@@ -952,6 +950,15 @@ label[for="childrens-number"] {
   border: none;
   content: "";
   background-image: url("../img/checkbox-on.svg");
+}
+
+.input-checkbox:disabled +label {
+  opacity: 0.3;
+}
+
+.input-checkbox:checked:disabled +label {
+  border: none;
+  background-image: url("../img/check-locked-on.svg") no-repeat;
 }
 
 .filter-form-price {
