@@ -306,7 +306,8 @@ img {
   background-repeat: no-repeat;
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--accent-hover);
 }
 
@@ -739,6 +740,7 @@ img {
 
 .search-form .input {
   height: 38px;
+  padding: 0;
   padding-left: 15px;
   font-family: inherit;
   font-weight: bold;
